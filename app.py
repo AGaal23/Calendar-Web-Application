@@ -7,7 +7,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'  # Use SQLite as 
 db = SQLAlchemy(app)
 
 
-# Define your Event model
+# Event model
 class Event(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(1000))
@@ -15,11 +15,9 @@ class Event(db.Model):
     end = db.Column(db.String(1000))
     url = db.Column(db.String(1000))
 
-# Create the database tables
+# Create the database
 with app.app_context():
     db.create_all()
-
-# Rest of your code...
 
 @app.route('/')
 def home():
