@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Add Event{% endblock title %}
+{% block content %}
+    <div class="container">
+        <form action="/add" method="POST">
+            <div class="form-row align-items-center">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Event</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Enter Event Name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="start">Start Date</label>
+                    <input type="text" class="form-control" id="start" name="start" placeholder="YYYY-MM-DD'T'00:00:00">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="end">End Date</label>
+                    <input type="text" class="form-control" id="end" name="end" placeholder="YYYY-MM-DD'T'00:00:00">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="url">Url</label>
+                    <input type="text" class="form-control" id="url" name="url" placeholder="Enter Url">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-outline-dark">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
